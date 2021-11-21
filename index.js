@@ -1,7 +1,7 @@
-import treeData from "./lib/treeData.js";
+import array2Tree from "./lib/array2Tree.js";
 import { plus } from "./math.js";
 export {
     //
-    treeData,
+    array2Tree,
     plus,
 };
