@@ -8,7 +8,7 @@ module.exports = {
     templates: {
         default: {
             staticFiles: {
-                include: ["jsdoc/resources"],
+                include: ["jsdoc"],
             },
             // layoutFile: "jsdoc/layout.tmpl",
         },
@@ -17,7 +17,7 @@ module.exports = {
             title: "yidash(易大师)",
             hideGenerator: false,
             outputSourceFiles: false,
-            css: "css/custom.css",
+            css: "other/jsdoc.custom.css",
             navLinks: [
                 {
                     label: "Github",
