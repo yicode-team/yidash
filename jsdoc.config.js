@@ -21,11 +21,7 @@ module.exports = {
             navLinks: [
                 {
                     label: "Github",
-                    href: "https://github.com/SoftwareBrothers/admin-bro",
-                },
-                {
-                    label: "Example Application",
-                    href: "https://admin-bro-example-app.herokuapp.com/admin",
+                    href: "https://github.com/chenbimo/yidash.git",
                 },
             ],
         },
