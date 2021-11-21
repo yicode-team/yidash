@@ -7,7 +7,7 @@
         "build": "rollup --config rollup.config.js",
         "doc": "jsdoc -c jsdoc.config.js -t ./node_modules/better-docs",
         "postinstall": "patch-package",
-        "np": "np"
+        "go": "np"
     },
     "keywords": [],
     "author": "",
