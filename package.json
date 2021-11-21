@@ -1,6 +1,6 @@
 {
     "name": "yidash",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "基于 lodash 函数库扩展的实用业务方法库",
     "main": "index.js",
     "scripts": {
