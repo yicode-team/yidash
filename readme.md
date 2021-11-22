@@ -6,4 +6,10 @@
 
 ## 文档地址
 
-[yidash 文档](https://yidash.chensuiyi.com)
+[yidash 在线文档地址](https://yidash.chensuiyi.com)
+
+## 仓库
+
+> [github https://github.com/chenbimo/yidash](https://github.com/chenbimo/yidash)
+
+> [gitee https://gitee.com/banshiweichen/yidash](https://gitee.com/banshiweichen/yidash)
