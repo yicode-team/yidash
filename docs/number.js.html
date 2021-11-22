@@ -7,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>yidash(易大师) array2Tree.js</title>
+  <title>yidash(易大师) number.js</title>
 
 
   <script src="scripts/run_prettify.js"></script>
@@ -77,7 +77,7 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#array2Tree">array2Tree</a></li><li><a href="global.html#minus">minus</a></li><li><a href="global.html#plus">plus</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-%25E5%25BC%2582%25E5%25B8%25B8.html">异常</a></li><li><a href="module-%25E6%2595%25B0%25E5%25AD%2597.html">数字</a></li><li><a href="module-%25E6%2595%25B0%25E5%25AD%25A6.html">数学</a></li><li><a href="module-%25E6%25A0%2591%25E7%25BB%2593%25E6%259E%2584.html">树结构</a></li><li><a href="module-%25E6%25AD%25A3%25E5%2588%2599.html">正则</a></li></ul></div>
                 
             </nav>
         </div>
@@ -85,7 +85,7 @@
             <div class="content">
                 <header class="page-title">
                     <p>Source</p>
-                    <h1>array2Tree.js</h1>
+                    <h1>number.js</h1>
                 </header>
                 
 
@@ -95,29 +95,48 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * 通用一级数组生成树结构
- * @param {Array} arrs - 传入的一维数组
- * @param {String} self - 唯一标识字段
- * @param {String} parent - 父级标识字段
- * @param {String} children - 子级标识字段
- * @returns
+ * @module 数字
  */
-export function array2Tree(arrs, self = "id", parent = "pid", children = "children") {
-    let menuObject = _.keyBy(arrs, self);
-    let menuArray = [];
 
-    arrs.forEach((item) => {
-        let pData = menuObject[item[parent]];
-        if (pData) {
-            if (!pData[children]) {
-                pData[children] = [];
+/**
+ * 返回有效数字
+ * @param {Number} number 数字传参
+ * @param {String} symbol 符号（默认：-0+，表示允许负数，0和正数）
+ * @param {Number} decimalPlaces - 小数位数
+ * @returns {Number} 如果数字有效，则返回当前值，否则返回上一个有效值
+ * @summary 应用场景：强制输入框必须输入有效值，如果值无效，则显示上一步的值
+ * @example
+ * import { number_ValidNumber } from 'yidash';
+ * let validNumber = number_ValidNumber();
+ * validNumber(1.111); // 1.11
+ * validNumber(1.571333); // 1.57
+ * validNumber("1..221333"); // 1.57
+ * validNumber("1.2213.33"); // 1.57
+ * validNumber("1."); // 1.
+ * validNumber("1.2"); // 1.20
+ * validNumber("1.7."); // 1.20
+ */
+export function number_ValidNumber(number, symbol = "-0+", decimalPlaces = 2) {
+    // 最后一个数字
+    let lastNumber = "";
+    return function (number) {
+        // 双层转换，保证得到一个字符串数字转换后的数字 (真实数字)
+        let stringNumber = String(number);
+        let realNumber = Number(stringNumber);
+
+        // 如果确实是一个数字
+        if (Number.isNaN(realNumber) === false) {
+            if (stringNumber.endsWith(".")) {
+                return number;
             }
-            pData[children].push(item);
+            // 将当前值缓存
+            let finallyNumber = realNumber.toFixed(decimalPlaces);
+            lastNumber = finallyNumber;
+            return finallyNumber;
         } else {
-            menuArray.push(item);
+            return lastNumber;
         }
-    });
-    return menuArray;
+    };
 }
 </code></pre>
         </article>

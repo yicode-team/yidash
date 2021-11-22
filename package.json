@@ -2,31 +2,38 @@
     "name": "yidash",
     "version": "1.0.1",
     "description": "基于 lodash 函数库扩展的实用业务方法库",
-    "main": "index.js",
     "scripts": {
-        "build": "rollup --config rollup.config.js",
-        "doc": "jsdoc -c jsdoc.config.js -t ./node_modules/better-docs",
+        "build": "del-cli --force dist & microbundle",
+        "dev": "del-cli --force dist & microbundle watch",
+        "doc": "del-cli --force docs & jsdoc -c jsdoc.config.json -t ./node_modules/better-docs",
         "postinstall": "patch-package",
         "go": "np"
     },
     "keywords": [],
-    "author": "",
+    "type": "module",
+    "author": "chensuiyi <bimostyle@qq.com>",
     "license": "ISC",
+    "source": "index.js",
+    "main": "dist/yidash.cjs",
+    "exports": {
+        "require": "./dist/yidash.cjs",
+        "import": "./dist/yidash.module.js",
+        "default": "./dist/yidash.modern.js"
+    },
+    "module": "./dist/yidash.module.js",
+    "umd:main": "./dist/yidash.umd.js",
+    "engines": {
+        "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    },
     "devDependencies": {
-        "@optimize-lodash/rollup-plugin": "^2.1.0",
-        "@rollup/plugin-commonjs": "^21.0.0",
-        "@rollup/plugin-node-resolve": "^13.0.5",
         "better-docs": "^2.3.2",
+        "del-cli": "^4.0.1",
         "jsdoc": "^3.6.7",
+        "microbundle": "^0.14.2",
         "np": "^7.6.0",
-        "rollup": "^2.58.0",
-        "rollup-plugin-cleanup": "^3.2.1",
-        "rollup-plugin-delete": "^2.0.0",
-        "rollup-plugin-visualizer": "^5.5.2"
+        "patch-package": "^6.4.7"
     },
     "dependencies": {
-        "lodash": "^4.17.21",
-        "lodash-es": "^4.17.21",
-        "patch-package": "^6.4.7"
+        "lodash-es": "^4.17.21"
     }
 }

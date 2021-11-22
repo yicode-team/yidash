@@ -1,7 +1,13 @@
-import array2Tree from "./lib/array2Tree.js";
-import { plus } from "./math.js";
+import { math_Plus, math_Minus } from "./lib/math.js";
+import { tree_Array2Tree } from "./lib/tree.js";
+import { regexp_TrainNumber } from "./lib/regexp.js";
+import { number_ValidNumber } from "./lib/number.js";
+
 export {
     //
-    array2Tree,
-    plus,
+    math_Plus,
+    math_Minus,
+    tree_Array2Tree,
+    regexp_TrainNumber,
+    number_ValidNumber,
 };

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>yidash(易大师) math.js</title>
+  <title>yidash(易大师) 数字</title>
 
 
   <script src="scripts/run_prettify.js"></script>
@@ -84,45 +82,296 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p>Source</p>
-                    <h1>math.js</h1>
+                    <p>Module</p>
+                    <h1>数字</h1>
                 </header>
                 
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/**
- *
- * @module 数学
- */
+        
+    
+</header>
 
-/**
- * 两数相减
- * @param {Number} x 数字 x
- * @param {Number} y 数字 y
- * @returns {Number} 返回一个数字
- * @author chensuiyi &lt;chensuiyi.com>
- */
-export function math_Minus(x, y) {
-    return x - y;
-}
+<article>
+    <div class="container-overview">
+    
+        
 
-/**
- * 两数相加
- * @param {Number} x 数字 x
- * @param {Number} y 数字 y
- * @returns {Number} 返回一个数字
- * @author chensuiyi &lt;chensuiyi.com>
- */
-export function math_Plus(x, y) {
-    return x + y;
-}
-</code></pre>
-        </article>
-    </section>
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".number_ValidNumber">
+        <a class="href-link" href="#.number_ValidNumber">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                number_ValidNumber<span class="signature">(number, symbol, decimalPlaces)</span><span class="type-signature"> &rarr; {Number}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary">应用场景：强制输入框必须输入有效值，如果值无效，则显示上一步的值</p>
+    
+    
+    <div class="description">
+        返回有效数字
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>number</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">Number</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">数字传参</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>symbol</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">String</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">符号（默认：-0+，表示允许负数，0和正数）</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>decimalPlaces</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">Number</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">小数位数</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="number.js.html" class="button">View Source</a>
+            <span>
+                <a href="number.js.html">number.js</a>, <a href="number.js.html#line23">line 23</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>如果数字有效，则返回当前值，否则返回上一个有效值</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<span class="param-type">Number</span>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>import { number_ValidNumber } from 'yidash';let validNumber = number_ValidNumber();validNumber(1.111); // 1.11validNumber(1.571333); // 1.57validNumber("1..221333"); // 1.57validNumber("1.2213.33"); // 1.57validNumber("1."); // 1.validNumber("1.2"); // 1.20validNumber("1.7."); // 1.20</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

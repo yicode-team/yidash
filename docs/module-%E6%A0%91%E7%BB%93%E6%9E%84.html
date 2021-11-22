@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>yidash(易大师) Global</title>
+  <title>yidash(易大师) 树结构</title>
 
 
   <script src="scripts/run_prettify.js"></script>
@@ -75,15 +75,15 @@
             
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Global</h3><ul><li><a href="global.html#array2Tree">array2Tree</a></li><li><a href="global.html#minus">minus</a></li><li><a href="global.html#plus">plus</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Modules</h3><ul><li><a href="module-%25E5%25BC%2582%25E5%25B8%25B8.html">异常</a></li><li><a href="module-%25E6%2595%25B0%25E5%25AD%2597.html">数字</a></li><li><a href="module-%25E6%2595%25B0%25E5%25AD%25A6.html">数学</a></li><li><a href="module-%25E6%25A0%2591%25E7%25BB%2593%25E6%259E%2584.html">树结构</a></li><li><a href="module-%25E6%25AD%25A3%25E5%2588%2599.html">正则</a></li></ul></div>
                 
             </nav>
         </div>
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p>Title</p>
-                    <h1>Global</h1>
+                    <p>Module</p>
+                    <h1>树结构</h1>
                 </header>
                 
 
@@ -94,7 +94,6 @@
 
 <header>
     
-        <h2></h2>
         
     
 </header>
@@ -103,44 +102,6 @@
     <div class="container-overview">
     
         
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-</dl>
-
 
         
     
@@ -169,21 +130,27 @@
 
 
     
-    <h4 class="name" id="array2Tree">
-        <a class="href-link" href="#array2Tree">#</a>
+    <h4 class="name" id=".tree_Array2Tree">
+        <a class="href-link" href="#.tree_Array2Tree">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
         
         <span class="code-name">
             
-                array2Tree<span class="signature">(arrs, self, parent, children)</span><span class="type-signature"></span>
+                tree_Array2Tree<span class="signature">(arrs, id, pid, children)</span><span class="type-signature"> &rarr; {Array}</span>
             
         </span>
     </h4>
     
 
     
+    <p class="summary">应用场景：用于生成无限级菜单结构</p>
+    
     
     <div class="description">
-        通用一级数组生成树结构
+        一维数组生成无限级树结构
     </div>
     
 
@@ -246,7 +213,7 @@
             
 <tr class="deep-level-0">
   
-      <td class="name"><code>self</code></td>
+      <td class="name"><code>id</code></td>
   
 
   <td class="type">
@@ -271,7 +238,7 @@
             
 <tr class="deep-level-0">
   
-      <td class="name"><code>parent</code></td>
+      <td class="name"><code>pid</code></td>
   
 
   <td class="type">
@@ -358,9 +325,9 @@
 
     
         <p class="tag-source">
-            <a href="array2Tree.js.html" class="button">View Source</a>
+            <a href="tree.js.html" class="button">View Source</a>
             <span>
-                <a href="array2Tree.js.html">array2Tree.js</a>, <a href="array2Tree.js.html#line9">line 9</a>
+                <a href="tree.js.html">tree.js</a>, <a href="tree.js.html#line52">line 52</a>
             </span>
         </p>
     
@@ -391,201 +358,13 @@
 
 <div class="columns">
     
-    
-</div>
-
-                
-        </div>
-    </div>
-
-
-
-
-</div>
-            
-                <div class="member">
-
-
-    
-    <h4 class="name" id="minus">
-        <a class="href-link" href="#minus">#</a>
-        
-        <span class="code-name">
-            
-                minus<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {Number}</span>
-            
-        </span>
-    </h4>
-    
-
-    
-    
-    <div class="description">
-        两数相减
-    </div>
-    
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-<div class="table-container">
-    <table class="params table">
-        <thead>
-        <tr>
-            
-            <th>Name</th>
-            
-
-            <th>Type</th>
-
-            
-
-            
-
-            <th class="last">Description</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        
-
-            
-<tr class="deep-level-0">
-  
-      <td class="name"><code>x</code></td>
-  
-
-  <td class="type">
-  
-      
-<span class="param-type">Number</span>
-
-
-  
-  </td>
-
-  
-
-  
-
-  <td class="description last">数字 x</td>
-</tr>
-
-
-        
-
-            
-<tr class="deep-level-0">
-  
-      <td class="name"><code>y</code></td>
-  
-
-  <td class="type">
-  
-      
-<span class="param-type">Number</span>
-
-
-  
-  </td>
-
-  
-
-  
-
-  <td class="description last">数字 y</td>
-</tr>
-
-
-        
-        </tbody>
-    </table>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="math.js.html" class="button">View Source</a>
-            <span>
-                <a href="math.js.html">math.js</a>, <a href="math.js.html#line17">line 17</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    <div class='param-desc column is-7'>返回一个数字</div>
+    <div class='param-desc column is-7'>返回一个无限级数组结构</div>
     
     
     <div class='column is-5 has-text-left'>
         <label>Type: </label>
         
-<span class="param-type">Number</span>
+<span class="param-type">Array</span>
 
 
     </div>
@@ -599,202 +378,11 @@
 
 
 
-</div>
-            
-                <div class="member">
-
-
-    
-    <h4 class="name" id="plus">
-        <a class="href-link" href="#plus">#</a>
-        
-        <span class="code-name">
-            
-                plus<span class="signature">(x, y)</span><span class="type-signature"> &rarr; {Number}</span>
-            
-        </span>
-    </h4>
-    
-
+    <h5>Example</h5>
     
     
-    <div class="description">
-        两数相加
-    </div>
+        <pre class="prettyprint"><code>import { tree_Array2Tree } from 'yidash';tree_Array2Tree([     { id:1, pid:0, name:'a' ,age:16 },     { id:2, pid:1, name:'b' ,age:18 },     { id:3, pid:2, name:'c' ,age:22 },     { id:4, pid:2, name:'d' ,age:25 },])// 结果如下：[{     id:1,     pid:0,     name:'a',     age:16,     children:[{         id:2,         pid:1,         name:'b',         age:18,         children:[             {                 id:3,                 pid:2,                 name:'c',                 age:22,                 children:[]             },             {                 id:4,                 pid:2,                 name:'d',                 age:25,                 children:[]             }         ]     }]}]</code></pre>
     
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-<div class="table-container">
-    <table class="params table">
-        <thead>
-        <tr>
-            
-            <th>Name</th>
-            
-
-            <th>Type</th>
-
-            
-
-            
-
-            <th class="last">Description</th>
-        </tr>
-        </thead>
-
-        <tbody>
-        
-
-            
-<tr class="deep-level-0">
-  
-      <td class="name"><code>x</code></td>
-  
-
-  <td class="type">
-  
-      
-<span class="param-type">Number</span>
-
-
-  
-  </td>
-
-  
-
-  
-
-  <td class="description last">数字 x</td>
-</tr>
-
-
-        
-
-            
-<tr class="deep-level-0">
-  
-      <td class="name"><code>y</code></td>
-  
-
-  <td class="type">
-  
-      
-<span class="param-type">Number</span>
-
-
-  
-  </td>
-
-  
-
-  
-
-  <td class="description last">数字 y</td>
-</tr>
-
-
-        
-        </tbody>
-    </table>
-</div>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-        <p class="tag-source">
-            <a href="math.js.html" class="button">View Source</a>
-            <span>
-                <a href="math.js.html">math.js</a>, <a href="math.js.html#line7">line 7</a>
-            </span>
-        </p>
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    <div class='param-desc column is-7'>返回一个数字</div>
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">Number</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
-
-
 
 
 </div>
