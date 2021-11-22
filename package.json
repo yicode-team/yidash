@@ -6,7 +6,7 @@
         "build": "del-cli --force dist & microbundle",
         "dev": "del-cli --force dist & microbundle watch",
         "doc": "del-cli --force docs & jsdoc -c jsdoc.config.json -t ./node_modules/better-docs",
-        "postinstall": "patch-package",
+        "patch": "patch-package",
         "go": "np"
     },
     "keywords": [],
