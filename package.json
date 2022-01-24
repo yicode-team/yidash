@@ -14,7 +14,6 @@
     },
     "sideEffects": false,
     "keywords": [],
-    "type": "module",
     "author": "chensuiyi <bimostyle@qq.com>",
     "license": "ISC",
     "source": "lib/*.mjs",

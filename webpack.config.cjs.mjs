@@ -4,7 +4,7 @@ import webpackConfigCommom from "./webpack.config.commom.mjs";
 
 export default webpackMerge(webpackConfigCommom, {
     output: {
-        filename: "[name].cjs.js",
+        filename: "[name].cjs.cjs",
         library: {
             type: "commonjs",
         },
