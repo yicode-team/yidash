@@ -16,6 +16,7 @@
     "source": "lib/index.js",
     "main": "dist/yidash.cjs",
     "exports": {
+        "lib/*": "./lib/*",
         "require": "./dist/yidash.cjs",
         "import": "./dist/yidash.module.js",
         "default": "./dist/yidash.modern.js"
