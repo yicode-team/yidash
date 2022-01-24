@@ -1,6 +1,6 @@
 {
     "name": "yidash",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "基于 lodash 函数库扩展的实用业务方法库",
     "scripts": {
         "build": "del-cli --force dist & microbundle",
