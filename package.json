@@ -3,36 +3,50 @@
     "version": "1.0.7",
     "description": "基于 lodash 函数库扩展的实用业务方法库",
     "scripts": {
-        "build": "del-cli --force dist & microbundle",
-        "dev": "del-cli --force dist & microbundle watch",
+        "build": "del-cli --force dist & npm run build:es & npm run build:cjs & npm run build:window & npm run build:amd",
+        "build:es": "webpack --config webpack.config.es.mjs",
+        "build:cjs": "webpack --config webpack.config.cjs.mjs",
+        "build:window": "webpack --config webpack.config.window.mjs",
+        "build:amd": "webpack --config webpack.config.amd.mjs",
         "doc": "del-cli --force docs & jsdoc -c jsdoc.config.json -t ./node_modules/better-docs",
         "patch": "patch-package",
         "go": "np"
     },
+    "sideEffects": false,
     "keywords": [],
     "type": "module",
     "author": "chensuiyi <bimostyle@qq.com>",
     "license": "ISC",
-    "source": "lib/index.js",
-    "main": "dist/yidash.cjs",
+    "source": "lib/*.mjs",
     "exports": {
-        "lib/*": "./lib/*",
-        "require": "./dist/yidash.cjs",
-        "import": "./dist/yidash.module.js",
-        "default": "./dist/yidash.modern.js"
+        "dist/*": "./dist/*"
     },
-    "module": "./dist/yidash.module.js",
-    "umd:main": "./dist/yidash.umd.js",
     "engines": {
         "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.16.12",
+        "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.7",
+        "@babel/plugin-proposal-optional-chaining": "^7.16.7",
+        "@babel/plugin-transform-runtime": "^7.16.10",
+        "@babel/preset-env": "^7.16.11",
+        "babel-loader": "^8.2.3",
         "better-docs": "2.7.1",
         "del-cli": "^4.0.1",
+        "fast-glob": "^3.2.11",
         "jsdoc": "^3.6.9",
-        "lodash-es": "^4.17.21",
-        "microbundle": "^0.14.2",
         "np": "^7.6.0",
-        "patch-package": "^6.4.7"
+        "patch-package": "^6.4.7",
+        "terser-webpack-plugin": "^5.3.0",
+        "webpack": "^5.67.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-merge": "^5.8.0"
+    },
+    "dependencies": {
+        "@babel/runtime": "^7.16.7",
+        "@babel/runtime-corejs3": "^7.16.8",
+        "core-js": "^3.20.3",
+        "lodash-es": "^4.17.21",
+        "regenerator-runtime": "^0.13.9"
     }
 }

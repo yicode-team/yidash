@@ -304,9 +304,9 @@
 
     
         <p class="tag-source">
-            <a href="number_validNumber.js.html" class="button">View Source</a>
+            <a href="number_validNumber.mjs.html" class="button">View Source</a>
             <span>
-                <a href="number_validNumber.js.html">number/validNumber.js</a>, <a href="number_validNumber.js.html#line24">line 24</a>
+                <a href="number_validNumber.mjs.html">number/validNumber.mjs</a>, <a href="number_validNumber.mjs.html#line24">line 24</a>
             </span>
         </p>
     
@@ -360,7 +360,15 @@
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>import { validNumber } from 'yidash';let validNumber = validNumber();validNumber(1.111); // 1.11validNumber(1.571333); // 1.57validNumber("1..221333"); // 1.57validNumber("1.2213.33"); // 1.57validNumber("1."); // 1.validNumber("1.2"); // 1.20validNumber("1.7."); // 1.20</code></pre>
+        <pre class="prettyprint"><code>import { validNumber } from 'yidash';
+let validNumber = validNumber();
+validNumber(1.111); // 1.11
+validNumber(1.571333); // 1.57
+validNumber("1..221333"); // 1.57
+validNumber("1.2213.33"); // 1.57
+validNumber("1."); // 1.
+validNumber("1.2"); // 1.20
+validNumber("1.7."); // 1.20</code></pre>
     
 
 

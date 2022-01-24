@@ -34,7 +34,7 @@
     "source": {
         "include": ["./lib"],
         "exclude": [],
-        "includePattern": ".+\\.js(doc|x)?$",
+        "includePattern": ".+\\.mjs(doc|x)?$",
         "excludePattern": "(^|\\/|\\\\)_"
     },
     "sourceType": "module",

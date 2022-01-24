@@ -1,0 +1,2 @@
+var e={d:(r,t)=>{for(var n in t)e.o(t,n)&&!e.o(r,n)&&Object.defineProperty(r,n,{enumerable:!0,get:t[n]})},o:(e,r)=>Object.prototype.hasOwnProperty.call(e,r)},r={};async function t(e,r="-0+",t=2){let n="";return function(e){let r=String(e),o=Number(r);if(!1===Number.isNaN(o)){if(r.endsWith("."))return e;let i=o.toFixed(t);return n=i,i}return n}}e.d(r,{B:()=>t});var n=r.B;export{n as validNumber};
+//# sourceMappingURL=number\validNumber.es.js.map

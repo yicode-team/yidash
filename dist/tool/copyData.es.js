@@ -1,0 +1,2 @@
+var e={d:(t,o)=>{for(var a in o)e.o(o,a)&&!e.o(t,a)&&Object.defineProperty(t,a,{enumerable:!0,get:o[a]})},o:(e,t)=>Object.prototype.hasOwnProperty.call(e,t)},t={};async function o(e){if(navigator.clipboard)navigator.clipboard.writeText(e);else{let t=document.createElement("textarea");document.body.appendChild(t),t.style.position="fixed",t.style.clip="rect(0 0 0 0)",t.style.top="10px",t.value=e,t.select(),document.execCommand("copy",!0),document.body.removeChild(t)}}e.d(t,{F:()=>o});var a=t.F;export{a as copyData};
+//# sourceMappingURL=tool\copyData.es.js.map
