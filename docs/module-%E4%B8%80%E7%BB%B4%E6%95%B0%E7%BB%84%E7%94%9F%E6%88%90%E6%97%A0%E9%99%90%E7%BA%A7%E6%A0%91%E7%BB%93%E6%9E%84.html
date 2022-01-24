@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>yidash(易大师) Home</title>
+  <title>yidash(易大师) 一维数组生成无限级树结构</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -86,17 +86,79 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p></p>
-                    <h1>Home</h1>
+                    <p>Module</p>
+                    <h1>一维数组生成无限级树结构</h1>
                 </header>
                 
 
 
 
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id=".array2Tree">
+        <a class="href-link" href="#.array2Tree">#</a>
+        
+            
+                <span class='tag'>static</span>
+            
+        
+        <span class="code-name">
+            
+                array2Tree<span class="signature">(arrs, id, pid, children)</span><span class="type-signature"> &rarr; {Array}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    <p class="summary">应用场景：用于生成无限级菜单结构</p>
+    
+    
+    <div class="description">
+        一维数组生成无限级树结构
+    </div>
     
 
 
-    <h3> </h3>
 
 
 
@@ -104,85 +166,241 @@
 
 
 
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>arrs</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">Array</code>
 
 
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">传入的一维数组</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">唯一标识字段</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>pid</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">父级标识字段</td>
+</tr>
+
+
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>children</code></td>
+  
+
+  <td class="type">
+  
+      
+<code class="param-type">String</code>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">子级标识字段</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="tree_array2Tree.js.html" class="button">View Source</a>
+            <span>
+                <a href="tree_array2Tree.js.html">tree/array2Tree.js</a>, <a href="tree_array2Tree.js.html#line53">line 53</a>
+            </span>
+        </p>
+    
+</dl>
 
 
 
-    <section>
-        <article><h3>yidash（易大师）</h3>
-<blockquote>
-<p>基于 lodash 函数库扩展的实用业务方法库</p>
-</blockquote>
-<p><img src="https://static.chensuiyi.com/images/yidash-logo.png" alt="logo"></p>
-<h2>安装</h2>
-<pre class="prettyprint source lang-bash"><code># 全局安装
-npm install --global yidash
-
-# 局部安装
-npm install yidash
-</code></pre>
-<h2>使用</h2>
-<h3>import 方式</h3>
-<pre class="prettyprint source lang-javascript"><code>import { math_Plus, tree_Array2Tree, regexp_TrainNumber, number_ValidNumber } from &quot;yidash&quot;;
-console.dir(math_Plus(3, 4));
-console.dir(
-    tree_Array2Tree([
-        { id: 1, pid: 0 },
-        { id: 2, pid: 1 },
-        { id: 3, pid: 2 },
-    ])
-);
-console.dir(regexp_TrainNumber);
-let validNumber = number_ValidNumber();
-console.log(validNumber(1.111)); // 1.11
-console.log(validNumber(1.571333)); // 1.57
-console.log(validNumber(&quot;1..221333&quot;)); // 1.57
-console.log(validNumber(&quot;1.2213.33&quot;)); // 1.57
-console.log(validNumber(&quot;1.&quot;)); // 1.
-console.log(validNumber(&quot;1.2&quot;)); // 1.20
-console.log(validNumber(&quot;1.2.&quot;)); // 1.20
-</code></pre>
-<h3>require 方式</h3>
-<pre class="prettyprint source lang-javascript"><code>const { math_Plus, tree_Array2Tree, regexp_TrainNumber, number_ValidNumber } = require(&quot;yidash&quot;);
-console.dir(math_Plus(3, 4));
-console.dir(
-    tree_Array2Tree([
-        { id: 1, pid: 0 },
-        { id: 2, pid: 1 },
-        { id: 3, pid: 2 },
-    ])
-);
-console.dir(regexp_TrainNumber);
-let validNumber = number_ValidNumber();
-console.log(validNumber(1.111)); // 1.11
-console.log(validNumber(1.571333)); // 1.57
-console.log(validNumber(&quot;1..221333&quot;)); // 1.57
-console.log(validNumber(&quot;1.2213.33&quot;)); // 1.57
-console.log(validNumber(&quot;1.&quot;)); // 1.
-console.log(validNumber(&quot;1.2&quot;)); // 1.20
-console.log(validNumber(&quot;1.2.&quot;)); // 1.20
-</code></pre>
-<h2>文档</h2>
-<p><a href="https://yidash.chensuiyi.com">yidash 在线文档地址</a></p>
-<h2>待办</h2>
-<ul>
-<li>根据某个一位数组的值，排序另外一个数组</li>
-<li>四则运算正则</li>
-</ul>
-<h2>仓库</h2>
-<blockquote>
-<p><a href="https://github.com/chenbimo/yidash">github https://github.com/chenbimo/yidash</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://gitee.com/banshiweichen/yidash">gitee https://gitee.com/banshiweichen/yidash</a></p>
-</blockquote></article>
-    </section>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>返回一个无限级数组结构</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">Array</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>import { array2Tree } from 'yidash';array2Tree([     { id:1, pid:0, name:'a' ,age:16 },     { id:2, pid:1, name:'b' ,age:18 },     { id:3, pid:2, name:'c' ,age:22 },     { id:4, pid:2, name:'d' ,age:25 },])// 结果如下：[{     id:1,     pid:0,     name:'a',     age:16,     children:[{         id:2,         pid:1,         name:'b',         age:18,         children:[             {                 id:3,                 pid:2,                 name:'c',                 age:22,                 children:[]             },             {                 id:4,                 pid:2,                 name:'d',                 age:25,                 children:[]             }         ]     }]}]</code></pre>
+    
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

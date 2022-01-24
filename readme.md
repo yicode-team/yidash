@@ -66,6 +66,11 @@ console.log(validNumber("1.2.")); // 1.20
 
 [yidash 在线文档地址](https://yidash.chensuiyi.com)
 
+## 待办
+
+-   根据某个一位数组的值，排序另外一个数组
+-   四则运算正则
+
 ## 仓库
 
 > [github https://github.com/chenbimo/yidash](https://github.com/chenbimo/yidash)

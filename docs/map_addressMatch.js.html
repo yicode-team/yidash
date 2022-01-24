@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>yidash(易大师) Home</title>
+  <title>yidash(易大师) map/addressMatch.js</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -86,103 +88,55 @@
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p></p>
-                    <h1>Home</h1>
+                    <p>Source</p>
+                    <h1>map/addressMatch.js</h1>
                 </header>
                 
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h3>yidash（易大师）</h3>
-<blockquote>
-<p>基于 lodash 函数库扩展的实用业务方法库</p>
-</blockquote>
-<p><img src="https://static.chensuiyi.com/images/yidash-logo.png" alt="logo"></p>
-<h2>安装</h2>
-<pre class="prettyprint source lang-bash"><code># 全局安装
-npm install --global yidash
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @category 地图
+ * @module 地址匹配
+ */
 
-# 局部安装
-npm install yidash
+/**
+ * 地址匹配
+ * @param {string} address 地址字符串
+ * @returns {array} 省市区
+ */
+export function addressMatch(address) {
+    let regex = /^(北京市|天津市|重庆市|上海市|香港特别行政区|澳门特别行政区)/;
+    let province = [];
+    let addressBean = {
+        province: null,
+        region: null,
+        city: null,
+    };
+
+    function regexAddressBean(address, addressBean) {
+        regex = /^(.*?[市]|.*?地区|.*?特别行政区)(.*?[市区县])(.*?)$/g;
+        let addxress = regex.exec(address);
+        addressBean.city = addxress[1];
+        addressBean.region = addxress[2];
+    }
+    if (!(province = regex.exec(address))) {
+        regex = /^(.*?(省|自治区))(.*?)$/;
+        province = regex.exec(address);
+        addressBean.province = province[1];
+        regexAddressBean(province[3], addressBean);
+    } else {
+        addressBean.province = province[1];
+        regexAddressBean(address, addressBean);
+    }
+    return addressBean;
+}
 </code></pre>
-<h2>使用</h2>
-<h3>import 方式</h3>
-<pre class="prettyprint source lang-javascript"><code>import { math_Plus, tree_Array2Tree, regexp_TrainNumber, number_ValidNumber } from &quot;yidash&quot;;
-console.dir(math_Plus(3, 4));
-console.dir(
-    tree_Array2Tree([
-        { id: 1, pid: 0 },
-        { id: 2, pid: 1 },
-        { id: 3, pid: 2 },
-    ])
-);
-console.dir(regexp_TrainNumber);
-let validNumber = number_ValidNumber();
-console.log(validNumber(1.111)); // 1.11
-console.log(validNumber(1.571333)); // 1.57
-console.log(validNumber(&quot;1..221333&quot;)); // 1.57
-console.log(validNumber(&quot;1.2213.33&quot;)); // 1.57
-console.log(validNumber(&quot;1.&quot;)); // 1.
-console.log(validNumber(&quot;1.2&quot;)); // 1.20
-console.log(validNumber(&quot;1.2.&quot;)); // 1.20
-</code></pre>
-<h3>require 方式</h3>
-<pre class="prettyprint source lang-javascript"><code>const { math_Plus, tree_Array2Tree, regexp_TrainNumber, number_ValidNumber } = require(&quot;yidash&quot;);
-console.dir(math_Plus(3, 4));
-console.dir(
-    tree_Array2Tree([
-        { id: 1, pid: 0 },
-        { id: 2, pid: 1 },
-        { id: 3, pid: 2 },
-    ])
-);
-console.dir(regexp_TrainNumber);
-let validNumber = number_ValidNumber();
-console.log(validNumber(1.111)); // 1.11
-console.log(validNumber(1.571333)); // 1.57
-console.log(validNumber(&quot;1..221333&quot;)); // 1.57
-console.log(validNumber(&quot;1.2213.33&quot;)); // 1.57
-console.log(validNumber(&quot;1.&quot;)); // 1.
-console.log(validNumber(&quot;1.2&quot;)); // 1.20
-console.log(validNumber(&quot;1.2.&quot;)); // 1.20
-</code></pre>
-<h2>文档</h2>
-<p><a href="https://yidash.chensuiyi.com">yidash 在线文档地址</a></p>
-<h2>待办</h2>
-<ul>
-<li>根据某个一位数组的值，排序另外一个数组</li>
-<li>四则运算正则</li>
-</ul>
-<h2>仓库</h2>
-<blockquote>
-<p><a href="https://github.com/chenbimo/yidash">github https://github.com/chenbimo/yidash</a></p>
-</blockquote>
-<blockquote>
-<p><a href="https://gitee.com/banshiweichen/yidash">gitee https://gitee.com/banshiweichen/yidash</a></p>
-</blockquote></article>
+        </article>
     </section>
-
-
 
 
 
