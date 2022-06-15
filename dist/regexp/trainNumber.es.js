@@ -1,2 +1,0 @@
-var r={d:(e,t)=>{for(var o in t)r.o(t,o)&&!r.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},o:(r,e)=>Object.prototype.hasOwnProperty.call(r,e)},e={};async function t(){return/^[GCDZTSPKXLY1-9]\d{1,4}$/}r.d(e,{M:()=>t});var o=e.M;export{o as trainNumber};
-//# sourceMappingURL=regexp\trainNumber.es.js.map

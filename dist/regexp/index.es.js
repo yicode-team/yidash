@@ -1,2 +1,0 @@
-var r={639:(r,e,t)=>{async function o(){return/^[GCDZTSPKXLY1-9]\d{1,4}$/}t.d(e,{M:()=>o})}},e={};function t(o){var n=e[o];if(void 0!==n)return n.exports;var a=e[o]={exports:{}};return r[o](a,a.exports,t),a.exports}t.d=(r,e)=>{for(var o in e)t.o(e,o)&&!t.o(r,o)&&Object.defineProperty(r,o,{enumerable:!0,get:e[o]})},t.o=(r,e)=>Object.prototype.hasOwnProperty.call(r,e);var o={};(()=>{t.d(o,{k:()=>r});const r={trainNumber:t(639).M}})();var n=o.k;export{n as regexp};
-//# sourceMappingURL=regexp\index.es.js.map

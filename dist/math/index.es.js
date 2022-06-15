@@ -1,2 +1,0 @@
-var r={163:(r,t,e)=>{async function n(r,t){return r-t}e.d(t,{h:()=>n})},342:(r,t,e)=>{async function n(r,t){return r+t}e.d(t,{P:()=>n})}},t={};function e(n){var o=t[n];if(void 0!==o)return o.exports;var a=t[n]={exports:{}};return r[n](a,a.exports,e),a.exports}e.d=(r,t)=>{for(var n in t)e.o(t,n)&&!e.o(r,n)&&Object.defineProperty(r,n,{enumerable:!0,get:t[n]})},e.o=(r,t)=>Object.prototype.hasOwnProperty.call(r,t);var n={};(()=>{e.d(n,{m:()=>o});var r=e(342),t=e(163);const o={plus:r.P,minus:t.h}})();var o=n.m;export{o as math};
-//# sourceMappingURL=math\index.es.js.map
