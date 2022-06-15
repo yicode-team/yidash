@@ -9,9 +9,8 @@
     "build:window": "webpack --config webpack.config.window.mjs",
     "build:amd": "webpack --config webpack.config.amd.mjs",
     "doc": "del-cli --force docs & jsdoc -c jsdoc.config.json",
-    "patch": "patch-package",
-    "go": "np",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tonpm": "release-it"
   },
   "type": "module",
   "sideEffects": false,
